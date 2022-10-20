@@ -1,49 +1,45 @@
-import React , {useState} from "react";
+import React, { useState } from "react";
+import './App.css'
 
 
 
-const employee={
+const App = () => {
+// using state
 
-id:'abc',
-name:'anito',
-salary:'$23',
-address:{
-salary: '$100',
-street: "sasas",
-country: "canada",
-province: "uinas"
-,
-zones:{
+    const [Loggedin , setlogin] =useState(false);
+  
 
-plant:'4e',
+return (
+        <div className="App" >
+<h1>welcome to the app</h1>
+    <button onClick={() => setlogin(!Loggedin)} > 
 
+    {Loggedin ? "log out" : "log in"}
+    </button>
 
+{/* using conditional rendering */}
+
+{
+Loggedin ? (<h1>hello </h1>)
+:
+(
+
+  <h2>please login to continue</h2>
+
+)
 }
-}
-}
 
 
- const App = () => {
-
-// using destructuring in place
-    const {name , id , salary,  address:{salary:addresssalary , street,country,province, zones:{plant}}} =employee;
+</div>
 
 
 
-    return (
-        <div>
-<p>
-</p>
-
-<h1>Hello world</h1> 
-<h2>{name}, {id}, {salary} , </h2>
-<h3>{country} , {province } , {street} , {addresssalary}</h3>
-
-<h3>{plant}</h3>
-  </div>
 
 
-    )
+
+
+
+    );
 
 
 }
