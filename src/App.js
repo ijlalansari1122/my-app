@@ -1,33 +1,17 @@
 import React, { useState } from "react";
 import './App.css'
+import Counter from "./Componets/Counter";
 
 
 
 const App = () => {
-// using state
-
-    const [Loggedin , setlogin] =useState(false);
-  
 
 return (
         <div className="App" >
-<h1>welcome to the app</h1>
-    <button onClick={() => setlogin(!Loggedin)} > 
 
-    {Loggedin ? "log out" : "log in"}
-    </button>
 
-{/* using conditional rendering */}
+<Counter/>
 
-{
-Loggedin ? (<h1>hello </h1>)
-:
-(
-
-  <h2>please login to continue</h2>
-
-)
-}
 
 
 </div>
